@@ -18,11 +18,9 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         HelloCommand::class,
-        AutoLoginCommand::class,
         TestCommand::class,
-        StatisticsEventCommand::class,
     ];
-    
+
     /**
      * Define the application's command schedule.
      *
@@ -33,7 +31,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('statistics:event')->dailyAt('23:30');
     }
-    
+
     /**
      * Register the commands for the application.
      *
@@ -42,7 +40,7 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__ . '/Commands');
-        
+
         require base_path('routes/console.php');
     }
 }

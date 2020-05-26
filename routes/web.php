@@ -17,14 +17,5 @@ Route::get('/', function () {
     return redirect("/admin/events");
 });
 
-Route::group(['prefix' => 'gas', 'namespace' => 'Gas'], function (Router $router){
-    $router->get('org/list', 'HandleController@orgList');
-    $router->get('subs/list', 'HandleController@subList');
-    $router->post('subs/lock', 'HandleController@lockSubs');
-    $router->post('subs/unlock', 'HandleController@unlockSubs');
-    $router->get('ic/list', 'HandleController@ICList');
-    $router->post('ic/freeze', 'HandleController@freezeIC');
-    $router->post('ic/unfreeze', 'HandleController@unfreezeIC');
-});
 
 Route::post('/test', 'TestController@test');

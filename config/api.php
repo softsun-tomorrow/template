@@ -1,7 +1,7 @@
 <?php
 return [
     'gas' => [
-        'url' => env("DOMAIN_GAS"),
+        'url' => env("DOMAIN"),
         'options' => [
             'exec_timeout' => env("EXEC_TIMEOUT", 3000),//ms
             'response_type' => 'raw',
@@ -10,10 +10,10 @@ return [
             ],
         ],
         'auto_login' => [
-            'userName' => '李钊',
+            'userName' => 'tttt',
             'password' => 'admin@123',
-            'randCode' => 'lubz',
-            'orgId' => 'ff808081596e22f20159865735440095'
+            'randCode' => 'ttt',
+            'orgId' => 'ttttt'
         ],
         'retry_times' => 3
     ],
